@@ -119,64 +119,29 @@ button { font: inherit; }
 }
 
 .hero {
-  isolation: isolate;
-  overflow: hidden;
+  text-align: center;
   background:
-    radial-gradient(ellipse at 77% 43%, #243658 0, transparent 48%),
+    radial-gradient(ellipse at 50% 38%, #353c55 0, #1b2946 30%, transparent 66%),
     linear-gradient(115deg, #0c1529, #0d172d 65%, #0c1528);
   border-bottom: 1px solid var(--line);
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1.17fr 1fr;
-  align-items: center;
-  gap: 3rem;
-  padding-block: clamp(4rem, 7.2vw, 7rem);
+  padding-block: clamp(2rem, 4.4vw, 4rem);
 }
 
 .hero h1 {
-  font-size: clamp(3.35rem, 6.45vw, 6.3rem);
-  line-height: .97;
-  font-weight: 750;
-  letter-spacing: -.042em;
+  width: clamp(12.5rem, 51vw, 26rem);
+  margin-inline: auto;
 }
 
-.hero h1 span { display: block; color: var(--gold); }
-
-.hero p {
-  max-width: 37ch;
-  margin-top: 1.6rem;
-  color: var(--muted);
-  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
-  line-height: 1.55;
-  text-wrap: pretty;
-}
-
-.hero .button { margin-top: 1.85rem; }
-
-.hero-brand {
-  display: grid;
-  place-items: center;
-  position: relative;
-  justify-self: stretch;
-  min-height: 290px;
-}
-
-.hero-brand::before {
-  content: "";
-  position: absolute;
-  inset: -11% -15%;
-  z-index: -1;
-  background: radial-gradient(ellipse, #ecc09220 0, #a3859520 27%, transparent 64%);
-  pointer-events: none;
-}
-
-.hero-brand img {
-  width: min(100%, 435px);
+.hero img {
+  width: 100%;
   height: auto;
   filter: drop-shadow(0 16px 24px #060c1dc2);
 }
+
+.hero .button { margin-top: clamp(1.15rem, 2.3vw, 1.75rem); }
 
 .button {
   display: inline-flex;
@@ -477,12 +442,6 @@ body:has(.viewer[open]) { overflow: hidden; }
 @media (max-width: 740px) {
   .wrap { width: calc(100% - 2.5rem); }
   .site-header .wrap { min-height: 63px; }
-  .hero-inner { gap: .5rem; padding-block: 3.2rem 2.2rem; grid-template-columns: 1fr; }
-  .hero h1 { font-size: clamp(3.45rem, 10.3vw, 5.1rem); }
-  .hero p { margin-top: 1.1rem; }
-  .hero .button { margin-top: 1.3rem; }
-  .hero-brand { min-height: 0; padding-block: .9rem 0; }
-  .hero-brand img { width: min(70%, 300px); }
   .contact { align-items: flex-start; flex-direction: column; }
 }
 
@@ -494,7 +453,6 @@ body:has(.viewer[open]) { overflow: hidden; }
 
 @media (max-width: 420px) {
   .nav > a { display: none; }
-  .hero h1 { font-size: clamp(2.94rem, 11vw, 4.2rem); }
   .wrap { width: calc(100% - 2rem); }
 }
 
